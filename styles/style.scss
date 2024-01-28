@@ -1,0 +1,190 @@
+@import 'variables';
+@import 'defaultSettings';
+
+.main-container {
+    background-color: white;
+    max-width: 1500px;
+    margin: auto;
+    padding-top: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    position: relative;
+    z-index: 0;
+}
+
+.gradient-background {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 70%;
+    height: 650px;
+    background: linear-gradient(to bottom right, white, hsl(216, 95%, 96%), #D6E6FE);
+    z-index: 1;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.logo-container {
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 5;
+}
+
+.title-description-calculator-container {
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.title-and-description-container {
+    width: 50%;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-title {
+    color: $dark-text-color;
+    font-size: $heading-XL;
+    line-height: 70px;
+    margin-bottom: 50px;
+}
+
+.page-description {
+    font-size: $paragraph-size;
+    color: $light-text-color;
+    line-height: 24px;
+}
+
+.calculator-container-wrapper {
+    width: 50%;
+    margin-left: 50px;
+}
+
+.calculator-container {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 10px 10px 20px 5px rgb(236, 234, 236);
+    border-radius: 10px;
+}
+
+.calc-title {
+    font-size: $heading-M;
+    color: $dark-text-color;
+    margin-bottom: 30px;
+}
+
+.radio-buttons-and-labels-container {
+    display: flex;
+    width: 100%;
+}
+
+.radio-button-and-label {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+
+.radio-button-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: 1px solid $borders;
+    margin-right: 10px;
+}
+
+.radio-button-checked {
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+    background-color: $blue;
+}
+
+.metric,
+.imperial {
+    background-color: $borders;
+}
+
+.label {
+    font-size: $paragraph-size;
+    color: $dark-text-color;
+    font-weight: 600;
+}
+
+.inputs-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.height-title-and-input,
+.weight-title-and-input {
+    width: 50%;
+}
+
+.height-title-and-input {
+    margin-right: 20px;
+}
+
+.height-title,
+.weight-title {
+    font-size: $paragraph-small;
+    color: $light-text-color;
+    margin-bottom: 5px;
+}
+
+.input-and-height-label-container,
+.input-and-weight-label-container {
+    display: flex;
+    border: 1px solid $borders;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 8px;
+}
+
+.input {
+    border: none;
+    padding: 7px;
+}
+
+.input::placeholder {
+    font-size: $heading-M;
+    color: $borders;
+}
+
+.height-label,
+.weight-label {
+    font-size: $heading-M;
+    color: $blue;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.welcome-container {
+    background-color: $blue;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    padding: 30px;
+}
+
+.welcome-title {
+    font-size: $heading-M;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.welcome-description {
+    font-size: $paragraph-small;
+    color: white;
+}
