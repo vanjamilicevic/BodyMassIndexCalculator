@@ -25,7 +25,7 @@ body {
   top: 0;
   left: 20px;
   width: 70%;
-  height: 650px;
+  height: 620px;
   background: linear-gradient(to bottom right, white, hsl(216, 95%, 96%), #D6E6FE);
   z-index: 1;
   border-bottom-left-radius: 30px;
@@ -106,6 +106,12 @@ body {
   border-radius: 50px;
   border: 1px solid #d8e2e7;
   margin-right: 10px;
+  transition: all 0.5s ease;
+}
+
+.radio-button-circle:hover {
+  border: 1px solid #345ff6;
+  cursor: pointer;
 }
 
 .radio-button-checked {
@@ -126,7 +132,7 @@ body {
   font-weight: 600;
 }
 
-.inputs-container {
+.inputs-container-metric {
   display: flex;
   width: 100%;
   margin-bottom: 30px;
@@ -157,11 +163,32 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 8px;
+  transition: all 0.5s ease;
+}
+
+.input-and-height-label-container:focus-within {
+  border: 1px solid #345ff6;
+}
+
+.input-and-weight-label-container:focus-within {
+  border: 1px solid #345ff6;
 }
 
 .input {
   border: none;
-  padding: 7px;
+  font-size: 24px;
+  color: #253347;
+  font-weight: 600;
+  font-family: "Inter";
+  width: 70%;
+}
+
+.input:focus {
+  outline: none;
+  font-size: 24px;
+  color: #253347;
+  font-weight: 600;
+  outline-offset: 0;
 }
 
 .input::-moz-placeholder {
@@ -182,6 +209,92 @@ body {
   margin-bottom: 8px;
 }
 
+.imperial-input-title {
+  font-size: 14px;
+  color: #5E6E85;
+  margin-bottom: 5px;
+}
+
+.height-imperial-inputs-and-labels,
+.weight-imperial-inputs-and-labels,
+.input-and-label-ft,
+.input-and-label-in,
+.input-and-label-st,
+.input-and-label-lbs {
+  display: flex;
+}
+
+.height-imperial-inputs-and-labels {
+  margin-bottom: 20px;
+}
+
+.input-and-label-ft,
+.input-and-label-in,
+.input-and-label-st,
+.input-and-label-lbs {
+  width: 50%;
+  border: 1px solid #d8e2e7;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 15px;
+  align-items: center;
+}
+.input-and-label-ft:focus-within,
+.input-and-label-in:focus-within,
+.input-and-label-st:focus-within,
+.input-and-label-lbs:focus-within {
+  border: 1px solid #345ff6;
+}
+
+.input-and-label-ft,
+.input-and-label-st {
+  margin-right: 25px;
+}
+
+.input-ft,
+.input-in,
+.input-st,
+.input-lbs {
+  border: none;
+  font-size: 24px;
+  color: #253347;
+  font-weight: 600;
+  font-family: "Inter";
+  width: 70%;
+}
+.input-ft:focus,
+.input-in:focus,
+.input-st:focus,
+.input-lbs:focus {
+  outline: none;
+}
+.input-ft::-moz-placeholder, .input-in::-moz-placeholder, .input-st::-moz-placeholder, .input-lbs::-moz-placeholder {
+  color: #d8e2e7;
+}
+.input-ft::placeholder,
+.input-in::placeholder,
+.input-st::placeholder,
+.input-lbs::placeholder {
+  color: #d8e2e7;
+}
+
+.input-and-label-in {
+  width: 50%;
+}
+
+.weight-imperial-inputs-and-labels {
+  margin-bottom: 30px;
+}
+
+.label-ft,
+.label-in,
+.label-st,
+.label-lbs {
+  color: #345ff6;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .welcome-container {
   background-color: #345ff6;
   border-bottom-left-radius: 10px;
@@ -200,4 +313,42 @@ body {
 .welcome-description {
   font-size: 14px;
   color: white;
+  font-weight: 200;
+}
+
+.bmi-result-and-result-desc-container {
+  display: flex;
+  align-items: center;
+}
+
+.result-container,
+.result-description-container {
+  width: 50%;
+}
+
+.result-text {
+  color: white;
+  font-size: 16px;
+}
+
+.result {
+  font-size: 64px;
+  color: white;
+  font-weight: 600;
+}
+
+.result-description {
+  font-size: 14px;
+  color: white;
+  font-weight: 200;
+  line-height: 150%;
+}
+
+.result-span {
+  color: white;
+  font-weight: 600;
+}
+
+.not-visible {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

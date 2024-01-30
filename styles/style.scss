@@ -17,7 +17,7 @@
     top: 0;
     left: 20px;
     width: 70%;
-    height: 650px;
+    height: 620px;
     background: linear-gradient(to bottom right, white, hsl(216, 95%, 96%), #D6E6FE);
     z-index: 1;
     border-bottom-left-radius: 30px;
@@ -98,6 +98,12 @@
     border-radius: 50px;
     border: 1px solid $borders;
     margin-right: 10px;
+    transition: all .5s ease;
+}
+
+.radio-button-circle:hover {
+    border: 1px solid $blue;
+    cursor: pointer;
 }
 
 .radio-button-checked {
@@ -118,7 +124,7 @@
     font-weight: 600;
 }
 
-.inputs-container {
+.inputs-container-metric {
     display: flex;
     width: 100%;
     margin-bottom: 30px;
@@ -149,11 +155,32 @@
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 8px;
+    transition: all .5s ease;
+}
+
+.input-and-height-label-container:focus-within {
+    border: 1px solid $blue;
+}
+
+.input-and-weight-label-container:focus-within {
+    border: 1px solid $blue;
 }
 
 .input {
     border: none;
-    padding: 7px;
+    font-size: $heading-M;
+    color: $dark-text-color;
+    font-weight: 600;
+    font-family: "Inter";
+    width: 70%;
+}
+
+.input:focus {
+    outline: none;
+    font-size: $heading-M;
+    color: $dark-text-color;
+    font-weight: 600;
+    outline-offset: 0;
 }
 
 .input::placeholder {
@@ -169,6 +196,84 @@
     margin-bottom: 8px;
 }
 
+// **********Imperial design***********
+
+.imperial-input-title {
+    font-size: $paragraph-small;
+    color: $light-text-color;
+    margin-bottom: 5px;
+}
+
+.height-imperial-inputs-and-labels,
+.weight-imperial-inputs-and-labels,
+.input-and-label-ft,
+.input-and-label-in,
+.input-and-label-st,
+.input-and-label-lbs {
+    display: flex;
+}
+
+.height-imperial-inputs-and-labels {
+    margin-bottom: 20px;
+}
+
+.input-and-label-ft,
+.input-and-label-in,
+.input-and-label-st,
+.input-and-label-lbs {
+    width: 50%;
+    border: 1px solid $borders;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 15px;
+    align-items: center;
+    &:focus-within {
+        border: 1px solid $blue;
+    }
+}
+
+.input-and-label-ft,
+.input-and-label-st {
+    margin-right: 25px;
+}
+
+.input-ft,
+.input-in,
+.input-st,
+.input-lbs {
+    border: none;
+    font-size: $heading-M;
+    color: $dark-text-color;
+    font-weight: 600;
+    font-family: "Inter";
+    width: 70%;
+
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        color: $borders;
+    }
+}
+
+.input-and-label-in {
+    width: 50%;
+}
+
+.weight-imperial-inputs-and-labels {
+    margin-bottom: 30px;
+}
+
+.label-ft,
+.label-in,
+.label-st,
+.label-lbs {
+    color: $blue;
+    font-size: $heading-M;
+    font-weight: 600;
+}
+
+// *********************Imperial design END********************
 .welcome-container {
     background-color: $blue;
     border-bottom-left-radius: 10px;
@@ -187,4 +292,43 @@
 .welcome-description {
     font-size: $paragraph-small;
     color: white;
+    font-weight: 200;
+}
+
+.bmi-result-and-result-desc-container {
+    display: flex;
+    align-items: center;
+}
+
+.result-container,
+.result-description-container {
+    width: 50%;
+}
+
+.result-text {
+    color: white;
+    font-size: $paragraph-size;
+}
+
+.result {
+    font-size: $heading-XL;
+    color: white;
+    font-weight: 600;
+}
+
+.result-description {
+    font-size: $paragraph-small;
+    color: white;
+    font-weight: 200;
+    line-height: 150%;
+}
+
+.result-span {
+    color: white;
+    font-weight: 600;
+
+}
+
+.not-visible {
+    display: none;
 }

@@ -39,8 +39,9 @@
 
           <div class="radio-buttons-and-labels-container">
             <div class="radio-button-and-label">
-              <div class="radio-button-circle metric">
-                <div class="radio-button-checked metric-checked"></div>
+              <div id="metric-button" class="radio-button-circle metric">
+                <!-- radio-button-checked -->
+                <div id="metric-checked" class="metric-checked radio-button-checked"></div> 
               </div>
               <p class="label">
                 Metric
@@ -48,22 +49,24 @@
             </div>
 
             <div class="radio-button-and-label">
-              <div class="radio-button-circle imperial">
-                <div class="radio-button-checked imperial-checked"></div>
+              <div id="imperial-button" class="radio-button-circle">
+                <!-- radio-button-checked -->
+                <div id="imperial-checked" class="imperial-checked"></div>
               </div>
               <p class="label">
                 Imperial
               </p>
             </div>
           </div>
-         
-          <div class="inputs-container">
+
+         <!-- Metric container -->
+          <div id="inputs-container-metric" class="inputs-container-metric">
             <div class="height-title-and-input">
               <p class="height-title">
                 Height
               </p>
               <div class="input-and-height-label-container">
-                <input class="input" type="number" placeholder="0">
+                <input id="input-cm" class="input" type="text" placeholder="0">
                 <p class="height-label">
                   cm
                 </p>
@@ -75,10 +78,44 @@
                 Weight
               </p>
               <div class="input-and-weight-label-container">
-                <input class="input" type="number" placeholder="0">
+                <input id="input-kg" class="input" type="text" placeholder="0">
                 <p class="weight-label">
                   kg
                 </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Imperial container -->
+          <div id="inputs-container-imperial" class="inputs-container-imperial not-visible">
+            <p class="imperial-input-title">
+              Height
+            </p>
+            <div class="height-imperial-container">
+              <div class="height-imperial-inputs-and-labels">
+                <div class="input-and-label-ft">
+                  <input class="input-ft" type="text" placeholder="0">
+                  <p class="label-ft">ft</p>
+                </div>
+                <div class="input-and-label-in">
+                  <input class="input-in" type="text" placeholder="0">
+                  <p class="label-in">in</p>
+                </div>
+              </div>
+            </div>
+            <p class="imperial-input-title">
+              Weight
+            </p>
+            <div class="weight-imperial-container">
+              <div class="weight-imperial-inputs-and-labels">
+                <div class="input-and-label-st">
+                  <input class="input-st" type="text" placeholder="0">
+                  <p class="label-st">st</p>
+                </div>
+                <div class="input-and-label-lbs">
+                  <input class="input-lbs" type="text" placeholder="0">
+                  <p class="label-lbs">lbs</p>
+                </div>
               </div>
             </div>
           </div>
@@ -91,6 +128,22 @@
               Enter your height and weight
               and you'll se your BMI result here
             </p>
+
+            <div class="bmi-result-and-result-desc-container not-visible">
+              <div class="result-container">
+                <p class="result-text">Your BMI is...</p>
+                <h1 class="result">23.4</h1>
+              </div>
+              <div class="result-description-container">
+                <p class="result-description">
+                  Your BMI suggests you're a 
+                  healthy weight. Your ideal 
+                  weight is between <span class="result-span">63kgs - 85.2kgs</span>.
+
+                  for background add class metric or imperial when checked
+                </p>
+              </div>
+            </div>
           </div>
   
           </div>
@@ -100,13 +153,6 @@
       </div>
     </section>
 
-
-    Your BMI is...
-
-    <!-- add score -->
-  
-    Your BMI suggests you're <!-- add classification -->. 
-    Your ideal weight is between <!-- add range -->.
   
     What your BMI result means
   
