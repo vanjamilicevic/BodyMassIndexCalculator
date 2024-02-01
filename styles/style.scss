@@ -6,8 +6,6 @@
     max-width: 1500px;
     margin: auto;
     padding-top: 50px;
-    padding-left: 150px;
-    padding-right: 150px;
     position: relative;
     z-index: 0;
 }
@@ -28,13 +26,16 @@
     position: relative;
     margin-bottom: 30px;
     z-index: 5;
+    padding-left: 150px;
 }
 
 .title-description-calculator-container {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
     position: relative;
     z-index: 10;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
 .title-and-description-container {
@@ -333,7 +334,66 @@
     display: none;
 }
 
+// Man eating section
+
+.curved-line {
+    position: absolute;
+    top: -50px;
+    right: 150px;
+}
+
+.man-eating-section {
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+    padding-right: 150px;
+    position: relative;
+}
+
+.image-man-eating-container {
+    width: fit-content;
+    margin-right: 150px;
+}
+
+.man-eating-image {
+    width: 550px;
+}
+
+.bmi-text-description-container {
+    margin-top: 120px;
+}
+
+.bmi-text-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: $dark-text-color;
+    line-height: 110%;
+}
+
+.bmi-text-description {
+    font-size: $paragraph-size;
+    color: $light-text-color;
+    line-height: 150%;
+}
+
 // -------------Media queries-------------
+
+@media only screen and (max-width: 1210px) {
+
+    .man-eating-section {
+        padding-left: 0;
+        padding-right: 30px;
+    }
+
+    .image-man-eating-container {
+        margin-right: 100px;
+    }
+
+    .bmi-text-title {
+        font-size: 32px;
+        letter-spacing: -2%;
+    }
+}
 
 @media only screen and (max-width: 1088px) {
 
@@ -350,10 +410,14 @@
         width: fit-content;
         margin: auto;
         margin-bottom: 40px;
+        padding-left: 0;
     }
 
     .title-description-calculator-container {
         flex-direction: column;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 100px;
     }
 
     .title-and-description-container {
@@ -376,17 +440,49 @@
         margin: 0;
         width: 100%;
     }
+
+    .curved-line {
+        display: none;
+    }
+
+    .image-man-eating-container {
+        width: 50%;
+        margin-left: -70px;
+    }
+
+    .man-eating-image {
+        width: 100%;
+    }
+
+    .bmi-text-description-container {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 750px) {
+    .man-eating-section {
+        flex-direction: column;
+        padding-right: 0;
+    }
 
-    .main-container {
-        padding-left: 20px;
-        padding-right: 20px;
+    .image-man-eating-container {
+        margin: 0;
+        width: 100%;
+    }
+
+    .bmi-text-description-container {
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
     }
 }
 
 @media only screen and (max-width: 550px) {
+
+    .title-description-calculator-container {
+        margin-bottom: 20px;
+    }
+
     .inputs-container-metric {
         flex-direction: column;
     }
@@ -424,5 +520,9 @@
 
     .result {
         margin-bottom: 20px;
+    }
+
+    .bmi-text-description-container {
+        margin-top: 30px;
     }
 }
