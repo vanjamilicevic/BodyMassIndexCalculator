@@ -8,6 +8,7 @@
     padding-top: 50px;
     position: relative;
     z-index: 0;
+    padding-bottom: 150px;
 }
 
 .gradient-background {
@@ -330,10 +331,6 @@
 
 }
 
-.not-visible {
-    display: none;
-}
-
 // Man eating section
 
 .curved-line {
@@ -348,6 +345,7 @@
     padding-left: 150px;
     padding-right: 150px;
     position: relative;
+    margin-bottom: 150px;
 }
 
 .image-man-eating-container {
@@ -376,6 +374,134 @@
     line-height: 150%;
 }
 
+.eating-excercise-sleep-section {
+    display: flex;
+    margin-bottom: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-radius: 30px;
+    background: linear-gradient(to bottom right, white, white, hsl(216, 95%, 98%), hsl(216, 95%, 99%));
+}
+
+.healthy-container {
+    width: 31%;
+}
+
+.icon-container {
+    margin-bottom: 30px;
+}
+
+.healthy-title {
+    font-size: $heading-M;
+    color: $dark-text-color;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.healthy-description {
+    font-size: $paragraph-size;
+    color: $light-text-color;
+}
+
+.limitations-desktop-section {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.limitations-text-and-gender-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.limitations-text-container {
+    width: 40%;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    width: 30%;
+    box-shadow: 10px 10px 50px 0px #D6E6FE;
+    border-radius: 20px;
+}
+
+.limitations-icon-and-title-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.limitations-title {
+    font-size: 20px;
+    color: $dark-text-color;
+    letter-spacing: -1px;
+}
+
+.limitations-description {
+    font-size: $paragraph-size;
+    color: $light-text-color;
+    font-weight: 400;
+}
+
+.limitations-icon-container {
+    width: fit-content;
+    margin-right: 15px;
+}
+
+.gender-container {
+    margin-right: 150px;
+}
+
+.limitations-main-title {
+    font-size: 48px;
+    color: $dark-text-color;
+    margin-bottom: 30px;
+}
+
+.limitations-main-description {
+    font-size: $paragraph-size;
+    color: $light-text-color;
+}
+
+.limitations-age-and-muscle-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.age-container {
+    margin-right: 30px;
+}
+
+.limitations-pregnancy-and-race-container {
+    display: flex;
+    justify-content: center;
+}
+
+.pregnancy-container {
+    margin-right: 30px;
+}
+
+.bottom-curve-container {
+    position: absolute;
+    top: -20px;
+    left: 20%;
+}
+
+.not-visible {
+    display: none;
+}
+
+.limitations-mobile-section {
+    display: none;
+}
+
 // -------------Media queries-------------
 
 @media only screen and (max-width: 1210px) {
@@ -392,6 +518,28 @@
     .bmi-text-title {
         font-size: 32px;
         letter-spacing: -2%;
+    }
+
+    .eating-excercise-sleep-section {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .healthy-container {
+        width: 100%;
+        margin-bottom: 50px;
+        display: flex;
+    }
+
+    .icon-container {
+        width: fit-content;
+        margin-right: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
     }
 }
 
@@ -457,6 +605,59 @@
     .bmi-text-description-container {
         width: 50%;
     }
+
+    .limitations-desktop-section {
+        display: none;
+    }
+
+    .limitations-mobile-section {
+        display: block;
+        text-align: center;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .limitations-title-mobile {
+        font-size: 32px;
+        color: $dark-text-color;
+        margin-bottom: 30px;
+    }
+
+    .limitations-description-mobile {
+        font-size: $paragraph-size;
+        color: $light-text-color;
+        margin-bottom: 50px;
+    }
+
+    .gender-and-age-container-mobile {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .gender-card-mobile {
+        margin-right: 30px;
+    }
+
+    .muscle-card-mobile {
+        margin-right: 30px;
+    }
+
+    .muscle-and-pregnancy-container-mobile {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .race-container-mobile {
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .card {
+        width: 40%;
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -474,6 +675,11 @@
         width: 80%;
         margin: auto;
         margin-top: 50px;
+    }
+
+    .eating-excercise-sleep-section {
+        margin-bottom: 50px;
+        padding-bottom: 10px;
     }
 }
 
@@ -524,5 +730,50 @@
 
     .bmi-text-description-container {
         margin-top: 30px;
+        width: 90%;
+    }
+
+    .man-eating-section {
+        margin-bottom: 50px;
+    }
+
+    .eating-excercise-sleep-section {
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: 20px;
+    }
+
+    .healthy-container {
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+
+    .icon-container {
+        margin-bottom: 20px;
+    }
+
+    .gender-and-age-container-mobile {
+        flex-direction: column;
+    }
+
+    .muscle-and-pregnancy-container-mobile {
+        flex-direction: column;
+    }
+
+    .gender-card-mobile {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+
+    .muscle-card-mobile {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+
+    .card {
+        width: 100%;
+        text-align: left;
     }
 }
